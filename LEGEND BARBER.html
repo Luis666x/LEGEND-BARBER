@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legend Barber</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+            overflow-x: hidden;
+            text-align: center;
+        }
+        .header-container {
+            position: relative;
+            text-align: center;
+        }
+        .header-banner {
+            width: 100%;
+            height: 200px;
+            background-image: url('https://scontent.fbaq8-1.fna.fbcdn.net/v/t39.30808-6/477802262_122093898332775469_1797554227060555561_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=sWQsJ34qjQgQ7kNvgE8Rgro&_nc_oc=Adheqe46XEoq9Y9q3mEc9KI5ILoFOwC3cKKzYzWSvtZtoCEf7Taa5PRn75yMTbVlJPI&_nc_zt=23&_nc_ht=scontent.fbaq8-1.fna&_nc_gid=ATJnlQPLiUoxkJY49KBTRFP&oh=00_AYCrsWJaNeXhSmKfkU5XAEPVsjKwl4g3io5GMk25tf-MPg&oe=67B1B3BF');
+            background-size: cover;
+            background-position: center;
+        }
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+        .hero {
+            padding: 50px 20px;
+        }
+        .hero h1 {
+            color: black;
+            font-size: 52px;
+            font-family: 'Lucida Handwriting', cursive;
+        }
+        .hero p {
+            color: black;
+            font-size: 26px;
+            font-family: 'Brush Script MT', cursive;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: gold;
+            color: #111;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            text-decoration: none;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
+        #qr-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+        #qr-modal img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-banner"></div>
+        <div class="logo">
+            <img src="https://scontent.fbaq8-1.fna.fbcdn.net/v/t39.30808-6/479185843_122093897186775469_7697584019733383417_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=rqdg3WCPFQkQ7kNvgG-bbnm&_nc_oc=AdhoxVKo02LIPzVSaqhDn5JfDMK4K6AEE0liSbo1Q1Y9f3EjmSDWMCXnE7hMyfsMrvk&_nc_zt=23&_nc_ht=scontent.fbaq8-1.fna&_nc_gid=AneXVWKSjuv7Pp7b8kZFN4N&oh=00_AYBAlZJXSqYfZ07uRCLOV3JaalgykOyxlhmdmd0PCl_VFw&oe=67B1A1C9" alt="Legend Barber Logo">
+        </div>
+    </div>
+    <section id="inicio" class="hero">
+        <h1>𝓑𝓲𝓮𝓷𝓿𝓮𝓷𝓲𝓭𝓸 𝓪 𝓛𝓮𝓰𝓮𝓷𝓭 𝓑𝓪𝓻𝓫𝓮𝓻</h1>
+        <p>𝓔𝓼𝓽𝓲𝓵𝓸, 𝓹𝓻𝓮𝓬𝓲𝓼𝓲ó𝓷 𝔂 𝓬𝓾𝓵𝓽𝓾𝓻𝓪 𝓡𝓪𝓼𝓽𝓪 𝓮𝓷 𝓬𝓪𝓭𝓪 𝓬𝓸𝓻𝓽𝓮.</p><h>⚡ "Cortes de precisión, confianza sin límites"</h>
+        <a href="https://wa.me/573156454629?text=Hola,%20quiero%20reservar%20una%20cita%20en%20Legend%20Barber" class="btn" target="_blank">Reserva tu cita</a>
+    </section>
+    <h2>REDES SOCIALES</h2>
+    <div class="social-links">
+        <a href="https://wa.me/573156454629" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61572616511044" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
+        <h3>PAGOS</h3>
+        <a href="#" id="nequi-link">
+            <img src="C:\Users\lucho\Desktop\LEGEND BARBER\img\LOGO NEQUI - Acceso directo.lnk" alt="Nequi" style="width: 40px; height: 40px;">
+        </a>
+    </div>
+    <div id="qr-modal">
+        <img src="C:\Users\lucho\Desktop\LEGEND BARBER\img\QR NEQUI.jpg" alt="QR Nequi">
+    </div>
+    <script>
+        document.getElementById('nequi-link').addEventListener('click', function() {
+            document.getElementById('qr-modal').style.display = 'flex';
+        });
+        document.getElementById('qr-modal').addEventListener('click', function() {
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html> 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legend Barber</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
+            overflow-x: hidden;
+            text-align: center;
+        }
+        .header-container {
+            position: relative;
+            text-align: center;
+        }
+        .header-banner {
+            width: 100%;
+            height: 200px;
+            background-image: url('https://scontent.fbaq8-1.fna.fbcdn.net/v/t39.30808-6/477802262_122093898332775469_1797554227060555561_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=sWQsJ34qjQgQ7kNvgE8Rgro&_nc_oc=Adheqe46XEoq9Y9q3mEc9KI5ILoFOwC3cKKzYzWSvtZtoCEf7Taa5PRn75yMTbVlJPI&_nc_zt=23&_nc_ht=scontent.fbaq8-1.fna&_nc_gid=ATJnlQPLiUoxkJY49KBTRFP&oh=00_AYCrsWJaNeXhSmKfkU5XAEPVsjKwl4g3io5GMk25tf-MPg&oe=67B1B3BF');
+            background-size: cover;
+            background-position: center;
+        }
+        .logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .logo img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid white;
+        }
+        .hero {
+            padding: 50px 20px;
+        }
+        .hero h1 {
+            color: black;
+            font-size: 52px;
+            font-family: 'Lucida Handwriting', cursive;
+        }
+        .hero p {
+            color: black;
+            font-size: 26px;
+            font-family: 'Brush Script MT', cursive;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: gold;
+            color: #111;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: transform 0.3s ease-in-out;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+        .btn:hover {
+            transform: scale(1.1);
+        }
+        .social-links {
+            margin-top: 20px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
+        .review-section {
+            margin: 50px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+        .star-rating span {
+            font-size: 24px;
+            cursor: pointer;
+            color: gray;
+        }
+        .star-rating span.active {
+            color: gold;
+        }
+        .comment-box {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+        .review-list {
+            text-align: left;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+        <section class="review-section">
+        <h2>Califica nuestra barbería</h2>
+        <div class="star-rating" id="starRating">
+            <span onclick="setRating(1)">★</span>
+            <span onclick="setRating(2)">★</span>
+            <span onclick="setRating(3)">★</span>
+            <span onclick="setRating(4)">★</span>
+            <span onclick="setRating(5)">★</span>
+        </div>
+        <textarea class="comment-box" id="comment" placeholder="Escribe tu comentario..."></textarea>
+        <button class="btn" onclick="submitReview()">Enviar</button>
+        <div class="review-list" id="reviews"></div>
+    </section>
+    <script>
+        let selectedRating = 0;
+        function setRating(rating) {
+            selectedRating = rating;
+            let stars = document.querySelectorAll(".star-rating span");
+            stars.forEach((star, index) => {
+                star.classList.toggle("active", index < rating);
+            });
+        }
+        function submitReview() {
+            let comment = document.getElementById("comment").value;
+            if (comment.trim() === "" || selectedRating === 0) return;
+            let reviewList = document.getElementById("reviews");
+            let newReview = document.createElement("p");
+            newReview.innerHTML = `${'★'.repeat(selectedRating)} ${comment}`;
+            reviewList.appendChild(newReview);
+            document.getElementById("comment").value = "";
+            selectedRating = 0;
+            document.querySelectorAll(".star-rating span").forEach(star => star.classList.remove("active"));
+        }
+    </script>
+</body>
+</html>
